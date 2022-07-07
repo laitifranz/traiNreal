@@ -1,7 +1,15 @@
 # Nreal AR Challenge 2022
 
-### Link Gdrive: 
+**Development branch of Laiti Francesco**
 
-https://drive.google.com/drive/folders/14ROQM2akJXYLt_qL-gFkHBkiH2ljndOK?usp=sharing
+University of Trento - Trento, 2022
+
+# Changelog
+
+### 1.0 (07/07/2022)
+- test
+
+Fixes:
+- test
 
 
