@@ -13,13 +13,12 @@ public class SettingsMenu : MonoBehaviour
     public TMP_Text handText, avatarText;
     public Slider slider;
 
-    string firstAccess = "firstAccess";
     string handChoice = "handChoice";
     string age = "age";
     string height = "height";
     string namePlayer = "name";
     string volume = "volume";
-    string lastAccess = "lastAccess";
+    //string lastAccess = "lastAccess"; //useful when erase all data
     string avatar = "avatarChoice";
 
     public AudioMixer audioMixer;
@@ -37,7 +36,7 @@ public class SettingsMenu : MonoBehaviour
         ageText.text = PlayerPrefs.GetInt(age).ToString();
         heightText.text = PlayerPrefs.GetInt(height).ToString();
         handText.text = "Main hand: " + PlayerPrefs.GetString(handChoice);
-        avatarText.text = PlayerPrefs.GetString(avatar);
+        //avatarText.text = PlayerPrefs.GetInt(avatar);
         slider.value = PlayerPrefs.GetFloat(volume);
 
     }
@@ -73,6 +72,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetHand(string hand)
     {
         PlayerPrefs.SetString(handChoice, hand);
+        PlayerPrefs.SetString(avatar, "Trainer");
         UpdateTexts();
         Debug.Log("hand set: " + hand);
     }

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using NRKernal;
 
 public class SceneChanger : MonoBehaviour
 {
 	string _sceneName;
+	public Image loadingProgressBar;
 
     public void ChangeScene(string sceneName)
 	{
@@ -45,6 +47,7 @@ public class SceneChanger : MonoBehaviour
 	public void Exit()
 	{
 		Debug.Log("Application closed");
+		PlayerPrefs.SetString("lastAccess", System.DateTime.Now.ToShortDateString());
 		Application.Quit();
 	}
 }

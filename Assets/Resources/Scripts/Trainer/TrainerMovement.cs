@@ -14,6 +14,8 @@ namespace NRKernal.NRExamples
         public Animator anim;
         [SerializeField]
         private Text _title;
+        string handChoice;
+        HandState handState;
         /// <summary> Awakes this object. </summary>
         void Awake()
         {
@@ -25,13 +27,17 @@ namespace NRKernal.NRExamples
         void Start()
         {
             anim.enabled = false;
+            handChoice = PlayerPrefs.GetString("handChoice");
+            //Debug.Log(handChoice);
         }
         /// <summary> Updates this object. </summary>
         void Update()
         {
-            //@TODO
-            // - add left hand
-            HandState handState = NRInput.Hands.GetHandState(HandEnum.RightHand); 
+            if (handChoice == "rightHand")
+                handState = NRInput.Hands.GetHandState(HandEnum.RightHand);
+            else
+                handState = NRInput.Hands.GetHandState(HandEnum.LeftHand);
+
             HandGesture handGesture = handState.currentGesture;
 
             bool isThumbsUp = anim.GetBool("isThumbsUp");
