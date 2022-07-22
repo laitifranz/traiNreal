@@ -301,120 +301,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a614867a196f94952a2bd36528f387a2, type: 3}
---- !u!1001 &336292262
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1291803124369748256, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_Name
-      value: PhotoCaptureExample
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291803124369748270, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ffe196d05e35b4c0998da15a210a0bde, type: 3}
---- !u!1001 &434132973
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7626699224027577853, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_Name
-      value: VideoCaptureExample
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626699224027577855, guid: 293783201831741fa91d19ec07a70de9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 293783201831741fa91d19ec07a70de9, type: 3}
 --- !u!95 &529299600 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8461256032877982122, guid: 76eb627933b6f48a7a3906dcd51dec2b, type: 3}
@@ -1086,7 +972,7 @@ RectTransform:
   m_GameObject: {fileID: 1782667373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 964716120}
   m_RootOrder: 1
@@ -1094,7 +980,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -264, y: 90}
-  m_SizeDelta: {x: 310, y: 30}
+  m_SizeDelta: {x: 620, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782667375
 MonoBehaviour:
@@ -1118,7 +1004,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
