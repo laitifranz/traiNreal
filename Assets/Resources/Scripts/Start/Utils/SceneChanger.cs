@@ -5,20 +5,39 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using NRKernal;
 
+//@TODO
+// - add dontdestroy to scene changer 
 public class SceneChanger : MonoBehaviour
 {
 	string _sceneName;
-	public Image loadingProgressBar;
+	List<string> controller_scene = new List<string>()
+		{
+			"Start",
+			"Settings",
+			"Helper"
+		};
+	//public GameObject loadingInterface;
+	//public Image loadingProgressBar;
+	//public Animator transition;
+	AsyncOperation sceneToLoad;
+
+	//private void Awake()
+	//{
+	//	DontDestroyOnLoad(this.gameObject);
+	//}
+    //  void Start()
+    //  {
+    ////loadingInterface.SetActive(false);
+    //  }
 
     public void ChangeScene(string sceneName)
 	{
+		//ShowLoadingBar();
 		_sceneName = sceneName;
 		//StartCoroutine(LoadAsyncScene());
-		SceneManager.LoadScene(_sceneName);
+		sceneToLoad = SceneManager.LoadSceneAsync(_sceneName);
 
-		Debug.Log("scene changed: " + _sceneName);
-
-		if(_sceneName == "AvatarStop")
+		if(!controller_scene.Contains(_sceneName))
         {
 			bool switchToHandTracking = NRInput.SetInputSource(InputSourceEnum.Hands);
 			if (switchToHandTracking)
@@ -26,25 +45,38 @@ public class SceneChanger : MonoBehaviour
 			else
 				Debug.Log("error while changing input");
 		}
+
+		Debug.Log("scene changed: " + _sceneName);
+
+		StartCoroutine(LoadAsyncScene());
 	}
 
-	// @TODO
-	// - add async mode load (problem with the inactive mode, check here: https://forum.unity.com/threads/coroutine-couldnt-be-started-because-the-the-game-object-is-inactive.275311/)
-	//IEnumerator LoadAsyncScene()
-	//   {
-	//	AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_sceneName);
-	//	//asyncLoad.allowSceneActivation = false;
+	//  https://www.youtube.com/watch?v=zObWVOv1GlE
 
-	//	// Wait until the asynchronous scene fully loads
-	//	while (!asyncLoad.isDone)
-	//	{
-	//		//progressText.text = async.progress + "";
-	//		Debug.Log("loading scene " + _sceneName);
-	//		yield return null;
-	//	}
+	IEnumerator LoadAsyncScene()
+    {
+		float totalProgress = 0;
+		//transition.SetTrigger("Start");
+		// asyncLoad = SceneManager.LoadSceneAsync(_sceneName);
+		//asyncLoad.allowSceneActivation = false;
+		//Debug.Log("loading scene");
+		// Wait until the asynchronous scene fully loads
+		while (!sceneToLoad.isDone)
+        {
+			totalProgress += sceneToLoad.progress;
+			//loadingProgressBar.fillAmount = totalProgress;
+            //progressText.text = async.progress + "";
+            Debug.Log("loading scene " + _sceneName + " | Progress " + totalProgress);
+            yield return null;
+        }
+	}
+
+	//public void ShowLoadingBar()
+ //   {
+	//	loadingInterface.SetActive(true);
 	//}
 
-	public void Exit()
+    public void Exit()
 	{
 		Debug.Log("Application closed");
 		PlayerPrefs.SetString("lastAccess", System.DateTime.Now.ToShortDateString());

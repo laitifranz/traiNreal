@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start/Helper.unity
     guid: 11b8ea5718d834160aad7e255b2b8dc0
   - enabled: 1
+    path: Assets/Scenes/Exercise/Warm up/Warmup.unity
+    guid: 13e0fc9c92ab64a9a84112c1c18985c3
+  - enabled: 1
     path: Assets/Scenes/Exercise/AvatarStop.unity
     guid: f6687da5f3ad744c893db781bb87d6c5
   - enabled: 1

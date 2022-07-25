@@ -11,11 +11,11 @@ namespace NRKernal.NRExamples
     {
         /// <summary> The mesh render. </summary>
         //private MeshRenderer m_MeshRender;
-        public Animator anim;
-        [SerializeField]
-        private Text _title;
+        Animator anim;
+        public Text _title;
         string handChoice;
         HandState handState;
+        HandGesture handGesture;
         /// <summary> Awakes this object. </summary>
         void Awake()
         {
@@ -26,8 +26,10 @@ namespace NRKernal.NRExamples
 
         void Start()
         {
+            anim = gameObject.GetComponent<Animator>();
             anim.enabled = false;
             handChoice = PlayerPrefs.GetString("handChoice");
+
             //Debug.Log(handChoice);
         }
         /// <summary> Updates this object. </summary>
@@ -38,19 +40,19 @@ namespace NRKernal.NRExamples
             else
                 handState = NRInput.Hands.GetHandState(HandEnum.LeftHand);
 
-            HandGesture handGesture = handState.currentGesture;
+            handGesture = handState.currentGesture;
 
-            bool isThumbsUp = anim.GetBool("isThumbsUp");
+            //bool isThumbsUp = anim.GetBool("isThumbsUp");
 
-            if ((handGesture == HandGesture.Victory) && (!isThumbsUp))
-            {
-                _title.text = "Good job!";
-                anim.SetBool("isThumbsUp", true);
-            }
-            else
-            {
-                anim.SetBool("isThumbsUp", false);
-            }
+            //if ((handGesture == HandGesture.Victory) && (!isThumbsUp))
+            //{
+            //    _title.text = "Good job!";
+            //    anim.SetBool("isThumbsUp", true);
+            //}
+            //else
+            //{
+            //    anim.SetBool("isThumbsUp", false);
+            //}
 
             //get controller rotation, and set the value to the cube transform
             //transform.rotation = NRInput.GetRotation();
