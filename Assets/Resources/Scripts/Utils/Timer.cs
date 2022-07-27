@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using NRKernal;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {   
     [Header("Component")]
-    public Text timerText;
+    public TMP_Text timerText;
 
     [Header("Timer settings")]
     public float currentTime;

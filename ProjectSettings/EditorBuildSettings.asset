@@ -12,17 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Start/Settings.unity
     guid: bb30bb0739843444b9b019c612470c60
   - enabled: 1
-    path: Assets/Scenes/Start/Helper.unity
-    guid: 11b8ea5718d834160aad7e255b2b8dc0
-  - enabled: 1
     path: Assets/Scenes/Exercise/Warm up/Warmup.unity
     guid: 13e0fc9c92ab64a9a84112c1c18985c3
   - enabled: 1
-    path: Assets/Scenes/Exercise/AvatarStop.unity
-    guid: f6687da5f3ad744c893db781bb87d6c5
+    path: Assets/Scenes/Exercise/Main exercise/SquatView.unity
+    guid: 6fa07b910ed2046dcb81754e5e99ab5e
   - enabled: 1
-    path: Assets/Scenes/Exercise/HeadTracking.unity
-    guid: 92d753b3433974e1c991101ff4085274
+    path: Assets/Scenes/Exercise/Main exercise/SquatAnalysis.unity
+    guid: 75759d658deea45b08e9784ad74477a0
+  - enabled: 1
+    path: Assets/Scenes/Exercise/Main exercise/Lunges.unity
+    guid: 28ec562fe70fe4a488caca8d134c2951
+  - enabled: 1
+    path: Assets/Scenes/Exercise/Stretching/Stretching.unity
+    guid: cfd6a269170be4d36b73c3df32c4c07d
   - enabled: 1
     path: Assets/Scenes/End/EndScene.unity
     guid: 4ac1a932cc6d24e36908c60df5d574d3

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 namespace NRKernal.NRExamples
 {
@@ -12,7 +13,7 @@ namespace NRKernal.NRExamples
         /// <summary> The mesh render. </summary>
         //private MeshRenderer m_MeshRender;
         Animator anim;
-        public Text _title;
+        public TMP_Text _title;
         string handChoice;
         HandState handState;
         HandGesture handGesture;

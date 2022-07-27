@@ -15,6 +15,10 @@ public class DrawLine : MonoBehaviour
     GameObject newLine;
     LineRenderer drawLine;
 
+    Vector3 calibration_pos;
+    public HeadTracking headTracking;
+    bool firstTime = true, risePlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,38 +27,63 @@ public class DrawLine : MonoBehaviour
 
         //camera_coordinates = NRFrame.HeadPose.position;
 
-        newLine = new GameObject();
+        newLine = new GameObject("Line");
+        newLine.transform.parent = gameObject.transform;
+        //newLine.SetActive(false);
         drawLine = newLine.AddComponent<LineRenderer>();
+        newLine.GetComponent<LineRenderer>().enabled = false;
         drawLine.material = new Material(Shader.Find("Sprites/Default"));
         //drawLine.material.SetColor("LineMaterial", new Color(1f, 1f, 1f, 1f));
-        drawLine.startColor = Color.red;
+        drawLine.startColor = Color.blue;
         drawLine.endColor = Color.blue;
         drawLine.startWidth = lineWidth;
         drawLine.endWidth = lineWidth;
 
+        //linePoints.Clear();
         //Debug.Log(linePoints);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        //Debug.Log(headTracking.calibrated);
+        if (headTracking.calibrated && firstTime) //TODO find a better solution for this, beacuse it is recalled just one time
         {
-            linePoints.Add(new Vector3(NRFrame.HeadPose.position[0], NRFrame.HeadPose.position[1], 2.82f));
-            //Debug.Log(GetMousePosition());
-            drawLine.positionCount = linePoints.Count;
-            drawLine.SetPositions(linePoints.ToArray());
-
-            timer = timerDelay;
-
-            Debug.Log(NRFrame.HeadPose.position);
+            calibration_pos = headTracking.calibration_position;
+            firstTime = false;
+            //newLine.SetActive(true);
+            Debug.Log("calibration pos");
         }
 
+        risePlayer = headTracking.loop;
 
+        if (risePlayer && !firstTime)
+        {
+            Debug.Log("rise player");
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                linePoints.Add(new Vector3(gameObject.transform.position[0] + NRFrame.HeadPose.position[0] - calibration_pos[0], gameObject.transform.position[1] + NRFrame.HeadPose.position[1] - calibration_pos[1], gameObject.transform.position[2]));
+                //Debug.Log(GetMousePosition());
 
+                timer = timerDelay;
+
+                //Debug.Log(NRFrame.HeadPose.position);
+            }
+        }
         // clean the linePoints.Clean()
+    }
+
+    public void DrawTheLine()
+    {
+        newLine.GetComponent<LineRenderer>().enabled = true;
+        drawLine.positionCount = linePoints.Count;
+        drawLine.SetPositions(linePoints.ToArray());
+    }
+
+    public void CleanLineValues()
+    {
+        linePoints.Clear();
     }
 
     Color randomColor()

@@ -11,7 +11,6 @@ public class PlayerPref : MonoBehaviour
     public TMP_Text lastSeenText;
     public AudioMixer audioMixer;
 
-    //string firstAccess = "firstAccess";
     string handChoice = "handChoice";
     string age = "age";
     string height = "height";
@@ -19,8 +18,9 @@ public class PlayerPref : MonoBehaviour
     string volume = "volume";
     string lastAccess = "lastAccess";
     string avatar = "avatarChoice";
+    string firstAccess = "firstAccess";
     // Start is called before the first frame update
-    void Start()
+    void Awake() //not Start, in order to avoid crashes or missing references 
     {
         if (!PlayerPrefs.HasKey(lastAccess))
         {
@@ -31,9 +31,17 @@ public class PlayerPref : MonoBehaviour
             PlayerPrefs.SetFloat(volume, -50f);
             PlayerPrefs.SetInt(avatar, 0);
             PlayerPrefs.SetString(lastAccess, System.DateTime.Now.ToShortDateString());
+            PlayerPrefs.SetInt(firstAccess, 1);
+            //PlayerPrefs.DeleteKey("alreadyView");
+            PlayerPrefs.SetInt("alreadyView", 0);
         }
         else
+        {
+            //PlayerPrefs.DeleteKey("alreadyView");
+            //PlayerPrefs.SetInt("alreadyView", 0);
             Debug.Log("using data already stored");
+        }
+            
         audioMixer.SetFloat("musicVolume", PlayerPrefs.GetFloat(volume));
         lastSeenText.text = "Last seen: " + PlayerPrefs.GetString(lastAccess);
         Debug.Log("last access: " + PlayerPrefs.GetString(lastAccess));

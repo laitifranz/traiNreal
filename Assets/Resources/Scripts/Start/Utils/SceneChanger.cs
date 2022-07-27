@@ -80,6 +80,7 @@ public class SceneChanger : MonoBehaviour
 	{
 		Debug.Log("Application closed");
 		PlayerPrefs.SetString("lastAccess", System.DateTime.Now.ToShortDateString());
+		PlayerPrefs.SetInt("firstAccess", 0);
 		Application.Quit();
 	}
 }
