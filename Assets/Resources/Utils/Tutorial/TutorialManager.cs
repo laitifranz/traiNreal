@@ -17,6 +17,9 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        if(SceneManager.GetActiveScene().name == "Warmup")
+            PlayerPrefs.SetInt("alreadyView", 0);
+
         if (PlayerPrefs.GetInt("alreadyView") == 0)
             alreadyView = false;
         else
@@ -66,7 +69,13 @@ public class TutorialManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        //if (SceneManager.GetActiveScene().name == "Warmup" && sentences.Count == 0)
+        //{
+        //    StartCoroutine(WaitSec());
+        //    return;
+        //}
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -75,8 +84,15 @@ public class TutorialManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+
         //dialogueText.text = sentence;
     }
+
+    //IEnumerator WaitSec()
+    //{
+    //    yield return new WaitForSeconds(3);
+    //    EndDialogue();
+    //}
 
     IEnumerator TypeSentence(string sentence)
     {

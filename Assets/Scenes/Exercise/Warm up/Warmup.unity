@@ -1133,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Come closer to me and turn around!
+      value: When you pinch me, come closer to me and turn around!!
       objectReference: {fileID: 0}
     - target: {fileID: 3309350126174422192, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: m_LocalPosition.x

@@ -86,7 +86,6 @@ public class LoadCharacter : MonoBehaviour
 
         if (activeScene == "Warmup")
         {
-            PlayerPrefs.SetInt("alreadyView", 0);
             Animator animator = trainer.GetComponent<Animator>();
             animator.runtimeAnimatorController = Resources.Load(path_warmup) as RuntimeAnimatorController;
         }
