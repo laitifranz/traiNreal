@@ -47,10 +47,10 @@ namespace NRKernal.Record
         [MonoPInvokeCallback(typeof(RenderEventDelegate))]
         private static void RunOnRenderThread(int eventID)
         {
-            //if (eventID == STARTENCODEEVENT)
-            //{
-            //    NativeEncoder.Start();
-            //}
+            if (eventID == STARTENCODEEVENT)
+            {
+                NativeEncoder.GetInstance().Start();
+            }
             //if (eventID == STOPENCODEEVENT)
             //{
             //    NativeEncoder.Stop();
@@ -95,8 +95,8 @@ namespace NRKernal.Record
             NRDebugger.Info("[VideoEncoder] Config {0}", EncodeConfig.ToString());
 #if !UNITY_EDITOR
             mNativeEncoder.SetConfigration(EncodeConfig, androidMediaProjection);
-            mNativeEncoder.Start();
-            //GL.IssuePluginEvent(RenderThreadHandlePtr, STARTENCODEEVENT);
+            //mNativeEncoder.Start();
+            GL.IssuePluginEvent(RenderThreadHandlePtr, STARTENCODEEVENT);
 #endif
             m_IsStarted = true;
         }

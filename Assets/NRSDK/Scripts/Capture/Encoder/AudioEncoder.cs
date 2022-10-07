@@ -11,6 +11,7 @@ namespace NRKernal.Record
 {
     using UnityEngine;
     using System;
+    using System.Collections.Generic;
     using AOT;
     using System.Runtime.InteropServices;
 
@@ -23,6 +24,15 @@ namespace NRKernal.Record
                 
         private bool m_IsStarted = false;
         private AudioDataCallBack mDataCallBack = null;
+        private static List<AudioEncoder> gInactiveAudioEncoders = new List<AudioEncoder>();
+
+#if !UNITY_EDITOR
+        private const int STARTENCODEEVENT = 0x2001;
+        private const int STOPENCODEEVENT = 0x2002;
+        private delegate void RenderEventDelegate(int eventID);
+        private static RenderEventDelegate RenderThreadHandle = new RenderEventDelegate(RunOnRenderThread);
+        private static IntPtr RenderThreadHandlePtr = Marshal.GetFunctionPointerForDelegate(RenderThreadHandle);
+#endif
 
         /// <summary> Default constructor. </summary>
         public AudioEncoder()
@@ -32,6 +42,25 @@ namespace NRKernal.Record
             mNativeEncoder.Register(this);
 #endif
         }
+
+#if !UNITY_EDITOR
+        [MonoPInvokeCallback(typeof(RenderEventDelegate))]
+        private static void RunOnRenderThread(int eventID)
+        {
+            if (eventID == STARTENCODEEVENT)
+            {
+                lock (gInactiveAudioEncoders)
+                {
+                    for (int i = 0; i < gInactiveAudioEncoders.Count; i++)
+                    {
+                        NativeEncoder.GetInstance().StartAudioRecorder(gInactiveAudioEncoders[i].mDataCallBack);
+                    }
+                    gInactiveAudioEncoders.Clear();
+                }
+                
+            }
+        }
+#endif
 
         /// <summary> Configurations the given parameter. </summary>
         /// <param name="param"> The parameter.</param>
@@ -61,9 +90,14 @@ namespace NRKernal.Record
             NRDebugger.Info("[AudioEncoder] Start");
             NRDebugger.Info("[AudioEncoder] Config {0}", EncodeConfig.ToString());
             mDataCallBack = onAudioDataCallback;
+            lock (gInactiveAudioEncoders)
+            {
+                gInactiveAudioEncoders.Add(this);
+            }
 #if !UNITY_EDITOR
             mNativeEncoder.SetConfigration(EncodeConfig, androidMediaProjection);
-            mNativeEncoder.StartAudioRecorder(mDataCallBack);
+            //mNativeEncoder.StartAudioRecorder(mDataCallBack);
+            GL.IssuePluginEvent(RenderThreadHandlePtr, STARTENCODEEVENT);
 #endif
             m_IsStarted = true;
         }
@@ -77,6 +111,10 @@ namespace NRKernal.Record
             }
 
             NRDebugger.Info("[AudioEncoder] Stop");
+            lock (gInactiveAudioEncoders)
+            {
+                gInactiveAudioEncoders.Remove(this);
+            }
 #if !UNITY_EDITOR
             mNativeEncoder.StopAudioRecorder(mDataCallBack);
 #endif
