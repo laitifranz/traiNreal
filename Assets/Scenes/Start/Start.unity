@@ -648,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &748679884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -665,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -83}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchoredPosition: {x: 235.6, y: -90.3}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &748679885
 MonoBehaviour:
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3064692441092930814, guid: a614867a196f94952a2bd36528f387a2, type: 3}
+      - m_Target: {fileID: 544763753}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -2705,10 +2705,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309350125107690986, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a74d14ddc9f4625a60342ef4fb45e0, type: 3}
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
       value: Let's dive in! Click on settings to choose my aspect, then return home
         and click Play!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3309350126174422192, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: m_RootOrder

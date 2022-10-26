@@ -12,7 +12,7 @@ public class HeadTracking : MonoBehaviour
     private TMP_Text _coordinates, _countReps;
 
     Vector3 headpose;
-    int count = 0;
+    public int count = 0;
     public int totalReps;
     public bool loop = true, calibrated = false;
 
@@ -23,7 +23,8 @@ public class HeadTracking : MonoBehaviour
     public GameObject circle, line;
 
     public DrawLine lineObj;
-
+    public SceneChanger changeScene;
+    public MoveCircle moveCircle;
     GameObject canvas;
     // Start is called before the first frame update
     void Start()
@@ -92,11 +93,23 @@ public class HeadTracking : MonoBehaviour
             line.GetComponent<LineRenderer>().enabled = false;
             line.GetComponentInChildren<LineRenderer>().enabled = false;
             line.transform.GetChild(0).GetComponentInChildren<LineRenderer>().enabled = false;
+
+            if (count >= totalReps)
+            {
+                circle.SetActive(false);
+                canvas.SetActive(false);
+                if (PlayerPrefs.GetFloat("score") < moveCircle.totMark / totalReps) PlayerPrefs.SetInt("betterThanLastTime", 0);
+                PlayerPrefs.SetFloat("score", moveCircle.totMark/totalReps);
+                PlayerPrefs.SetInt("totalReps", totalReps);
+                
+                //changeScene.ChangeScene("Lunges");
+            }
         }
 
-
-        _countReps.text = count.ToString() + "/" + totalReps.ToString();
+        if (count < totalReps)  _countReps.text = count.ToString() + "/" + totalReps.ToString();
+        else _countReps.text = "Now you can go ahead!";
         _coordinates.text = headpose.ToString();
+
     }
 }
 

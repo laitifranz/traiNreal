@@ -1123,6 +1123,18 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[2]
       value: Come closer to him and see the trainer in all the directions!
       objectReference: {fileID: 0}
+    - target: {fileID: 3309350125107690986, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a74d14ddc9f4625a60342ef4fb45e0, type: 3}
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: Put your phone in the pocket and use your hand!
@@ -1134,6 +1146,14 @@ PrefabInstance:
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
       value: When you pinch me, come closer to me and turn around!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3309350126174422192, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: m_LocalPosition.x

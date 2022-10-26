@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTracking: {fileID: 1911378210}
+  totMark: 0
 --- !u!1 &263195173
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +861,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309350125107690986, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025768, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a74d14ddc9f4625a60342ef4fb45e0, type: 3}
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 4
@@ -881,6 +894,14 @@ PrefabInstance:
     - target: {fileID: 3309350125442025774, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
       value: When you are ready, click on "Start here!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309350125442025775, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3309350126174422192, guid: 4f4adc545aad9481eb0e7fa6a657ad48, type: 3}
       propertyPath: m_RootOrder
@@ -2113,7 +2134,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -241, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296817485
 MonoBehaviour:
@@ -2191,8 +2212,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: aba1ef1f2b1af43f194eb2baa05d8639, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2465,6 +2486,17 @@ Transform:
   m_Father: {fileID: 923175087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1552484735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3064692441092930814, guid: a614867a196f94952a2bd36528f387a2, type: 3}
+  m_PrefabInstance: {fileID: 1101034955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ae4525ec9754861aad14c220d93483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1662321885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556635457664080, guid: ad152f08ed7eb6e4abd93376a0203e38, type: 3}
@@ -3031,6 +3063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 584968897}
   _countReps: {fileID: 1206920856}
+  count: 0
   totalReps: 10
   loop: 1
   calibrated: 0
@@ -3041,6 +3074,8 @@ MonoBehaviour:
   circle: {fileID: 1397092314}
   line: {fileID: 923175085}
   lineObj: {fileID: 1466114068}
+  changeScene: {fileID: 1552484735}
+  moveCircle: {fileID: 236735331}
 --- !u!4 &1911378211
 Transform:
   m_ObjectHideFlags: 0
@@ -3129,7 +3164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2131062783
 RectTransform:
   m_ObjectHideFlags: 0

@@ -46,6 +46,8 @@ public class SceneChanger : MonoBehaviour
 				Debug.Log("error while changing input");
 		}
 
+		if (sceneName == "EndScene") PlayerPrefs.SetInt("tutorialEnabled", 0);
+
 		Debug.Log("scene changed: " + _sceneName);
 
 		StartCoroutine(LoadAsyncScene());

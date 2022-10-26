@@ -10,41 +10,26 @@ public class TutorialManager : MonoBehaviour
     private Queue<string> sentences;
 
     public Canvas canvas;
-    //public Text nameText;
     public TMP_Text dialogueText;
-
-    bool alreadyView;
 
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Warmup")
-            PlayerPrefs.SetInt("alreadyView", 0);
-
-        if (PlayerPrefs.GetInt("alreadyView") == 0)
-            alreadyView = false;
-        else
-            alreadyView = true;
-
-        if (SceneManager.GetActiveScene().name == "Start")
-            PlayerPrefs.SetInt("alreadyView", 1);
-
-        PlayerPrefs.Save();
-
-        Debug.Log(alreadyView);
-
-        if (alreadyView)
+        if (PlayerPrefs.GetInt("tutorialEnabled") == 1)
         {
-            gameObject.SetActive(false);
-        }
+            gameObject.SetActive(true);
+            Debug.Log(PlayerPrefs.GetInt("tutorialEnabled"));
+            sentences = new Queue<string>();
+            GameObject.Find("TutorialManager/Canvas/Continue").GetComponent<DialogueTrigger>().TriggerDialogue();
 
-        sentences = new Queue<string>();
-        GameObject.Find("TutorialManager/Canvas/Continue").GetComponent<DialogueTrigger>().TriggerDialogue();
-
-        if(canvas != null) {
-            canvas.GetComponent<Canvas>().enabled = false;
-            //canvas.gameObject.SetActive(false);
+            if (canvas != null)
+            {
+                canvas.GetComponent<Canvas>().enabled = false;
+                //canvas.gameObject.SetActive(false);
+            }
         }
-            
+        else gameObject.SetActive(false);
+
+
         //if (PlayerPrefs.GetInt("firstAccess") == 0)
         //    GameObject.Find("TutorialManager").SetActive(false); //TODO implement a better solution for optimization, like avoiding use this class and all the childrens
         //if (PlayerPrefs.GetInt("firstAccess"))

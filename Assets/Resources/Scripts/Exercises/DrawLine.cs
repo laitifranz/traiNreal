@@ -59,7 +59,7 @@ public class DrawLine : MonoBehaviour
 
         if (risePlayer && !firstTime)
         {
-            Debug.Log("rise player");
+            // Debug.Log("rise player");
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
