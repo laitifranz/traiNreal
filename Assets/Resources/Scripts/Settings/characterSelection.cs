@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class characterSelection : MonoBehaviour
+public class CharacterSelection : MonoBehaviour
 {
     public GameObject[] characters;
     public int selectedCharacter = 0;
@@ -25,8 +25,5 @@ public class characterSelection : MonoBehaviour
         characters[selectedCharacter].SetActive(true);
     }
 
-    public void Save()
-    {
-        PlayerPrefs.SetInt("avatarChoice", selectedCharacter);
-    }
+    public void Save() { PlayerPrefs.SetInt("avatarChoice", selectedCharacter); }
 }

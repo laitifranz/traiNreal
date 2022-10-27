@@ -18,25 +18,18 @@ public class SettingsMenu : MonoBehaviour
     string height = "height";
     string namePlayer = "name";
     string volume = "volume";
-    //string lastAccess = "lastAccess"; //useful when erase all data
     string avatar = "avatarChoice";
 
     public AudioMixer audioMixer;
 
-    void Start()
-    {
-        UpdateTexts();
-        //Debug.Log("name: " + PlayerPrefs.GetString(namePlayer));
-        //Debug.Log("age: " + PlayerPrefs.GetInt(age).ToString());
-        //Debug.Log("height: " + PlayerPrefs.GetInt(height).ToString());
-    }
+    void Start() { UpdateTexts(); }
+
     public void UpdateTexts()
     {
         nameText.text = PlayerPrefs.GetString(namePlayer);
         ageText.text = PlayerPrefs.GetInt(age).ToString();
         heightText.text = PlayerPrefs.GetInt(height).ToString();
         handText.text = "Main hand: " + PlayerPrefs.GetString(handChoice);
-        //avatarText.text = PlayerPrefs.GetInt(avatar);
         slider.value = PlayerPrefs.GetFloat(volume);
 
     }
@@ -76,10 +69,8 @@ public class SettingsMenu : MonoBehaviour
         UpdateTexts();
         Debug.Log("hand set: " + hand);
     }
-    public void SaveSettings()
-    {
-        PlayerPrefs.Save();
-    }
+    public void SaveSettings() { PlayerPrefs.Save(); }
+
     //@TODO
     // - set default data when erase all data
     public void DeleteData()

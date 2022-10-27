@@ -18,7 +18,6 @@ public class Timer : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
 
-    // Update is called once per frame
     void Update()
     {
         currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
@@ -34,8 +33,5 @@ public class Timer : MonoBehaviour
         SetTimerText();
     }
 
-    private void SetTimerText()
-    {
-        timerText.text = currentTime.ToString("0.00");
-    }
+    private void SetTimerText() { timerText.text = currentTime.ToString("0.00"); }
 }

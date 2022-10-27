@@ -9,7 +9,7 @@ public class PlayerPref : MonoBehaviour
     public TMP_Text lastSeenText;
     public AudioMixer audioMixer;
 
-    void Awake() //Use Wawke insteead of Start, in order to avoid crashes or missing references 
+    void Awake() //Use Awake instead of Start in order to avoid crashes or missing references 
     {
         if (!PlayerPrefs.HasKey("lastAccess"))
         {
@@ -28,13 +28,10 @@ public class PlayerPref : MonoBehaviour
         }
         else
         {
-            //PlayerPrefs.DeleteKey("alreadyView");
-            //PlayerPrefs.SetInt("alreadyView", 0);
             Debug.Log("using data already stored");
         }
             
         audioMixer.SetFloat("musicVolume", PlayerPrefs.GetFloat("volume"));
         lastSeenText.text = "Last seen: " + PlayerPrefs.GetString("lastAccess");
-        Debug.Log("last access: " + PlayerPrefs.GetString("lastAccess"));
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 namespace NRKernal.NRExamples
 {
-    /// <summary> A cube interactive test. </summary>
     public class TrainerEasterEgg : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
     {
         public Animator anim;

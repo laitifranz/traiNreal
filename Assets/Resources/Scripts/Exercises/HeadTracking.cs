@@ -26,34 +26,24 @@ public class HeadTracking : MonoBehaviour
     public SceneChanger changeScene;
     public MoveCircle moveCircle;
     GameObject canvas;
-    // Start is called before the first frame update
+
     void Start()
     {
-        //Pose headpose = NRFrame.HeadPose;
         canvas = GameObject.Find("ReferenceLine/Canvas").gameObject;
         headpose = NRFrame.HeadPose.position;
         calibration_button.gameObject.SetActive(true);
         circle.SetActive(false);
         canvas.SetActive(false);
         line.GetComponent<LineRenderer>().enabled = false;
-        //line.SetActive(false);
         _countReps.gameObject.SetActive(false);
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         headpose = NRFrame.HeadPose.position;
-        //Debug.Log(headpose[1]);
-        //Debug.Log("headpose coordinates: " + headpose);
 
-        // @TODO
-        // - count reps only when the movement is finished
-        // -
         if(calibrated)
             CountRep();
-        //Debug.Log("headpose coordinates: " + headpose.position);
     }
 
     public void Calibration()
@@ -62,8 +52,6 @@ public class HeadTracking : MonoBehaviour
         Debug.Log("calibration set");
         calibration_button.gameObject.SetActive(false);
         circle.SetActive(true);
-        //line.SetActive(true);
-        //line.GetComponent<LineRenderer>().enabled = false;
         _countReps.gameObject.SetActive(true);
         calibrated = true;
     }
@@ -101,17 +89,11 @@ public class HeadTracking : MonoBehaviour
                 if (PlayerPrefs.GetFloat("score") < moveCircle.totMark / totalReps) PlayerPrefs.SetInt("betterThanLastTime", 0);
                 PlayerPrefs.SetFloat("score", moveCircle.totMark/totalReps);
                 PlayerPrefs.SetInt("totalReps", totalReps);
-                
-                //changeScene.ChangeScene("Lunges");
             }
         }
 
         if (count < totalReps)  _countReps.text = count.ToString() + "/" + totalReps.ToString();
         else _countReps.text = "Now you can go ahead!";
         _coordinates.text = headpose.ToString();
-
     }
 }
-
-// headpose.position returns x,y,z
-// headpose.rotation returns angles rotations

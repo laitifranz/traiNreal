@@ -8,7 +8,7 @@ public class DisplayResult : MonoBehaviour
 {
     public TMP_Text _summary;
     private string summaryText;
-    // Start is called before the first frame update
+
     void Start()
     {
         summaryText = "SUMMARY:\n";
