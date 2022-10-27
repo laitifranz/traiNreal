@@ -118,10 +118,10 @@ We implemented 4 characters, available [here](Assets/Resources/Characters):
 4. Space Robot Kyle *from [Unity](https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696)*
 
 To correctly import the character, it is important to follow these steps:
-1. Import the .fbx file inside the project
+1. Import the .*fbx* file inside the project
 2. Open the *Inspector* of the game object
-3. Set the boxes like this <br><img width="200" alt="rig" src="images/rig_gameobject.png">
-4. If you would like to add the default skin (it works with Mixamo characters), select *Material*, apply the settings as the image explain, and then *Apply* <br><img width="200" alt="material" src="images/material_gameobject.png">
+3. Set the boxes like this <br><img width="300" alt="rig" src="images/rig_gameobject.png">
+4. If you would like to add the default skin (it works with Mixamo characters), select *Material*, apply the settings as the image explain, and then *Apply* <br><img width="300" alt="material" src="images/material_gameobject.png">
 5. Now you should find a new prefab inside the same folder of you character!
 
 ### Animations
@@ -141,7 +141,7 @@ To properly use the animation from Mixamo, it is important to do these steps:
 2. Expand the object by using the arrow
 3. Select the animation object (teal triangle)
 4. Copy and paste the animation in another folder dedicated to animations
-5. :attention: Be aware that some animations could have the *Loop Time* checkbox selected. This is essential for some animations that needs to be repeat forever
+5. :warning: Be aware that some animations could have the *Loop Time* checkbox selected. This is essential for some animations that needs to be repeat forever
 6. Create an *Animation Controller* by right-click on the [Controller folder](Assets/Resources/Animations/Controller) and choose *Create*. You need this because you have to create a step-by-step animations plan for you characters (see examples provided by us [here](Assets/Resources/Animations/Controller))
 7. Add your sequence of animations in the *Animation Controller* ([tutorial here](https://youtu.be/m8rGyoStfgQ))
 
@@ -209,7 +209,7 @@ Settings   Warm up   Helper
 ```
 
 ### Data storage
-We saved the preferences of the user using *PlayerPrefs* class (reference: docs.unity3d.com/ScriptReference/PlayerPrefs.html).
+We saved the preferences of the user using *PlayerPrefs* class (reference: [docs.unity3d.com/ScriptReference/PlayerPrefs.html](docs.unity3d.com/ScriptReference/PlayerPrefs.html)).
 
 With this class we easely created different key-value data to store information like the age, the name, the volume level and so on. 
 
@@ -259,7 +259,7 @@ With AR technology it is possible to see your surrounding environment and avoid 
     ```
 7. Build your application and save the .apk on your computer
 8.  Now you are ready to deploy the application on your device! :rocket:
-9.  We used adb from command line to run the app on Android platform (more info available at https://developer.android.com/studio/command-line/adb)
+9.  We used ```adb``` from command line to run the app on Android platform (more info available at https://developer.android.com/studio/command-line/adb)
 
 If you would like to test the scene in the Unity simulator, you can do it by running the project on your local machine. You can find how to use the emulator of Nreal [here](https://nreal.gitbook.io/nrsdk/development/tools/testing-with-emulator).  
 
@@ -273,7 +273,7 @@ NOTE:
 ## Usage :iphone:
 
 1. Open the application. If it is the first time that you open the app, you will be guided inside the app
-2. Choose your personal trainer in the *settings* among those proposed
+2. Choose your personal trainer, among those proposed, in *Setting*
 3. Play the workout and enjoy the free-joystic interaction
 4. Enjoy your workout and do your best! :zap:
 
@@ -297,7 +297,7 @@ We provide some GIFs to show how the app looks like when wearing the glasses:
 
 <!-- AWARD -->
 ## Award
-Honorable mention by Nreal for the first milestone.
+Honorable mention by Nreal for the first milestone. We are waiting for the announcement of winners.
 <!-- add photos of swag gadget -->
 
 <!-- LICENSE -->
@@ -322,7 +322,7 @@ We thank the team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the 
 
 A special thank to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication to follow us during whole the project. Thanks to Giuseppe Spallita (PhD student) for helping us with the first and third milestone of the challenge.
 
-Background music: Wake - Chris Heria [soundcloud](https://soundcloud.com/chrisheria/woke-chris-heria?in=chrisheria/sets/workout-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing)
+Background music: Wake - Chris Heria ([SoundCloud](https://soundcloud.com/chrisheria/woke-chris-heria?in=chrisheria/sets/workout-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
