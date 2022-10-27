@@ -33,7 +33,7 @@
             <li><a href="#characters">Characters</a></li>
             <li><a href="#animations">Animations</a></li>
             <li><a href="#ar-implementation-goggles">AR implementation</a></li>
-            <li><a href="#scene-structures">Scene structures</a></li>
+            <li><a href="#scenes-structure">Scenes structure</a></li>
             <li><a href="#data-storage">Data storage</a></li>
       </ul>
     </li>
@@ -52,8 +52,8 @@
     <li><a href="#award">Award</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contacts</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -67,12 +67,12 @@ The 3D models for the humanoids used in this project were taken from [Mixamo](ht
 Moreover, for the animations of the characters we used the [OptiTrack](https://optitrack.com/) system, which is available at the Multisensory Interactions Lab to track and record body movements.-->
 We were invited to join this challenge after our final submission of the Computer Vision project available at [github.com/laitifranz/AR-SMPLX](github.com/laitifranz/AR-SMPLX).
 
-We had the opportunity to work with the latest AR technologies and grow our knowledge and experience with Unity.
+We had the opportunity to work with the latest AR technologies and gain knowledge and experience with Unity.
 <!-- NREAL AR JAM CHALLENGE -->
 ### Nreal AR JAM Challenge 2022
 The [Nreal AR Jam](https://developer.nreal.ai/arjam/overview) is an international online challenge which was proposed in order to attract AR developers to its growing community. The competition is divided into 8 macro categories: At-Home Fitness, Art, Games, Screen 2.0, Port, Social, NFT and Student.
 
-We decided to apply for *At-Home Fitness* category because we believe that COVID pandemic has drastically changed our habits and many of us have taken the isolation as a chance to improve their fitness, but improvising can be ineffective or, even worse, dangerous.
+We decided to apply for *At-Home Fitness* category because we believe that the COVID pandemic has drastically changed our habits and many of us have taken the isolation as a chance to improve their fitness, but improvising can be ineffective or, even worse, dangerous.
 
 We presented our idea with this incipit:
 
@@ -85,7 +85,7 @@ Therefore, we developed an idea for helping people at home and don't feel alone 
 ![Workflow](images/workflow_light.png#gh-light-mode-only)
 ![Workflow](images/workflow_dark.png#gh-dark-mode-only)
 The challenge was divided into 3 milestones: 
-- Milestone 1: proposing an idea and a pitch that described our application.
+- Milestone 1: propose an idea and a pitch that describe our application.
 - Milestone 2: provide concept arts (screenshots and videos of the application) and update the description.
 
 | | | |
@@ -101,7 +101,7 @@ In this section we will provide some information about how we obtained character
 
 We thank the YouTube channel [iHeartGameDev](https://www.youtube.com/c/iHeartGameDev) for the amazing tutorials that he made. We suggest you to see these videos to learn more about *Animation Controllers* and how to manage *Characters*, in particular [this playlist](https://www.youtube.com/playlist?list=PLwyUzJb_FNeS8s7OQKeNIr3NMHBIbhFeC).
 
-In the source code we left references, as comment, to resources where we found how to do a certain task.
+In the source code we left references, as comments, to resources where we found how to do a certain task.
 
 ### Characters
 We used two main sources for downloading our characters:
@@ -134,7 +134,7 @@ We used two main sources for our animations:
       - Keyframe Reduction: none
 2. OptiTrack systems @ Multisensory Interactions Lab UniTN - [optitrack.com](https://optitrack.com/)
 
-We implemented several animations for our project available [here](Assets/Resources/Animations)
+We implemented several animations for our project available [here](Assets/Resources/Animations).
 
 To properly use the animation from Mixamo, it is important to do these steps:
 1. Go to your file animation that you have downloaded from Mixamo
@@ -142,13 +142,13 @@ To properly use the animation from Mixamo, it is important to do these steps:
 3. Select the animation object (teal triangle)
 4. Copy and paste the animation in another folder dedicated to animations
 5. :warning: Be aware that some animations could have the *Loop Time* checkbox selected. This is essential for some animations that needs to be repeat forever
-6. Create an *Animation Controller* by right-click on the [Controller folder](Assets/Resources/Animations/Controller) and choose *Create*. You need this because you have to create a step-by-step animations plan for you characters (see examples provided by us [here](Assets/Resources/Animations/Controller))
-7. Add your sequence of animations in the *Animation Controller* ([tutorial here](https://youtu.be/m8rGyoStfgQ))
+6. Create an *Animation Controller* by right-click on the [Controller folder](Assets/Resources/Animations/Controller) and choose *Create*. You need to do this because you have to create a step-by-step animations plan for you characters (see [examples](Assets/Resources/Animations/Controller) provided by us)
+7. Add your sequence of animations in the *Animation Controller* ([tutorial](https://youtu.be/m8rGyoStfgQ))
 
 ### AR Implementation :goggles:
-We exploit the NRSDK provided by Nreal (https://developer.nreal.ai/download). The SDK package is already included in our project, therefore you should run it without reinstalling it.
+We exploit the NRSDK provided by Nreal on [developer.nreal.ai/download](https://developer.nreal.ai/download). The SDK package is already included in our project, therefore you should run it without reinstalling it.
 
-If you would like to update the NRSDK (the version provided by us is available in the README file [here](Assets/NRSDK/README.md)), follow these steps:
+If you would like to update the NRSDK (you can check the version of the NRSDK that we used in the [README](Assets/NRSDK/README.txt) file), follow these steps:
 1. Download the new version from the official site of Nreal
 2. Open your project in Unity
 3. Right click on ```Assets > Import Package > Custom Package ```
@@ -164,10 +164,10 @@ We focused our attention on *NRInput*, because we needed to switch the input sou
 bool switchToHandTracking = NRInput.SetInputSource(InputSourceEnum.Hands);
 ```
 
-### Scene Structures
+### Scenes Structure
 We structured our project in scenes, and we move the player across scenes during the workout.
 
-This is the scheme of the scenes that you can find [here](Assets/Scene):
+This is the scheme of the scenes that you can find in [Assets/Scenes](Assets/Scenes):
 ```
 .
 ├── Start               
@@ -218,23 +218,25 @@ We faced reference errors while launching the app for the first time, due to the
 ## Features
 
 ### Gamification
-Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the users is especially weighted by the quality of the exercises.
+Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the users is weighted on the quality of the exercises.
 
 We presented the final reward as a *score*, analysing the quality of the squat. We adopted the following function:
 $$score(d) = \biggl({\frac{1}{d + 0.5} }-1\biggl)*100$$
 
-where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score has a range between $-\infty$ and 100.
+where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score has a range between $-\infty$ and 100 (higher is better). 
+
+We decided to adopt that function because it has a non-linear behaviour that penalizes the user's error more when it fails to stay in the green area. We empirically found the boundaries and adjusted the function for our scope.
 
 ### Real-time Feedback
 We provide real-time feedbacks to the user in order to evaluate how well the athlete is performing the squat exercise. For the evaluation, we take into consideration the movement of the head as suggested in this scientific paper "[The back squat: A proposed assessment of functional deficits and technical factors that limit performance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262933/)".
 
 ### Multi-view perspective
-With this feature, we provide the ability to explore the 3D exercises from all perspectives in order to help the athlete understand how to perform correctly the exercise.
+With this feature, we provide the possibility to explore the 3D exercises from all perspectives in order to help the user understand how to perform correctly the exercise. The personal trainer can be stopped in a certain position to see exactly the body pose.
 
 ### Immersivity
 The trainer has to behave similar to a real human being, emulating a real workout with a personal trainer. 
 
-With AR technology it is possible to see your surrounding environment and avoid losing the orientation and the perceive of the room.
+We decided to use an AR experience instead of a VR one because with a VR experience the user will be detached from reality. This entails the loss of the perception of the surrounding environment. Due to this, the user may lose the orientation and the perception of the room while it is moving and performing the exercise.
 
 <!-- GETTING STARTED -->
 ## Getting Started :man_technologist:
@@ -259,12 +261,12 @@ With AR technology it is possible to see your surrounding environment and avoid 
     ```
 7. Build your application and save the .apk on your computer
 8.  Now you are ready to deploy the application on your device! :rocket:
-9.  We used ```adb``` from command line to run the app on Android platform (more info available at https://developer.android.com/studio/command-line/adb)
+9.  We used ```adb``` from the terminal to run the app on Android platform (more info available at [developer.android.com/studio/command-line/adb](https://developer.android.com/studio/command-line/adb))
 
 If you would like to test the scene in the Unity simulator, you can do it by running the project on your local machine. You can find how to use the emulator of Nreal [here](https://nreal.gitbook.io/nrsdk/development/tools/testing-with-emulator).  
 
 NOTE: 
-- For the iOS world we are waiting an update from Nreal to make the technology compatible with Apple devices, as mentioned by them on [Twitter](https://twitter.com/Nreal/status/1570399354745421825?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1570399354745421825%7Ctwgr%5E0b2e9280e1fcb86f0bfd2ff83dd765ac5bc6a591%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fd-19093620514075177499.ampproject.net%2F2210010655000%2Fframe.html)
+- For the iOS world we are waiting for an update from Nreal to make the technology compatible with Apple devices, as mentioned by them on [Twitter](https://twitter.com/Nreal/status/1570399354745421825?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1570399354745421825%7Ctwgr%5E0b2e9280e1fcb86f0bfd2ff83dd765ac5bc6a591%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fd-19093620514075177499.ampproject.net%2F2210010655000%2Fframe.html)
 - For the Android world, it is already possible to use the Nreal smart glasses. Please, refer to this [link](https://nreal.gitbook.io/nrsdk/frequently-asked-questions) for compatibility Android version and devices
 - The application was tested on OnePlus 8T with Nreal Light - [nreal.ai/light](https://nreal.ai/light)
 
@@ -273,8 +275,8 @@ NOTE:
 ## Usage :iphone:
 
 1. Open the application. If it is the first time that you open the app, you will be guided inside the app
-2. Choose your personal trainer, among those proposed, in *Setting*
-3. Play the workout and enjoy the free-joystic interaction
+2. Choose your personal trainer, among those proposed, in *Settings*
+3. Start the workout and enjoy the free-joystic interaction
 4. Enjoy your workout and do your best! :zap:
 
 
@@ -320,9 +322,12 @@ The project is only for educational purposes. We don't monetize or get profit fr
 
 We thank the team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the active collaboration and the opportunity to use the OptiTrack system available at the Multisensory Interactions Lab.
 
-A special thank to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication to follow us during whole the project. Thanks to Giuseppe Spallita (PhD student) for helping us with the first and third milestone of the challenge.
+A special thanks to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication in following us during whole the project. Thanks to Giuseppe Spallita (PhD student) for helping us with the first and third milestones of the challenge.
 
 Background music: Wake - Chris Heria ([SoundCloud](https://soundcloud.com/chrisheria/woke-chris-heria?in=chrisheria/sets/workout-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Motivational quote
+“No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”
+<p align="right">- <i>Socrates</i> -</p>
