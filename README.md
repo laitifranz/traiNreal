@@ -185,10 +185,10 @@ Now we will present how the scenes are connected:
 ```           
             Start 
               |
-    --------------------
-    |         |        |
-    |         |        |
-Settings   Warm up   Helper   
+    ---------------------
+    |         |         |
+    |         |         |
+Settings   Warm up    Helper   
               |
           SquatView
               |
@@ -196,7 +196,7 @@ Settings   Warm up   Helper
               |
             Lunges
               |
-          Stretching
+         Stretching
               |
              End
               |
@@ -218,9 +218,10 @@ We faced reference errors while launching the app for the first time, due to the
 Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the user is weighted on the quality of the exercises.
 
 We presented the final reward as a *score*, analysing the quality of the squat. We adopted the following function:
-$$score(d) = \biggl({\frac{1}{d + 0.5} }-1\biggl)*100$$
 
-where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score has a range between $-\infty$ and 100 (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
+$$score(d) = \begin{cases} \left(\frac{1}{d+0.5}-1\right) * 100 & \text{if } d \in[0,0.5) \\ 0 & \text{if } d \geqslant 0.5 \end{cases}$$
+
+where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score is in a range between [0,100] (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
 
 We decided to adopt that function because it has a non-linear behaviour that penalizes the user's error more when it fails to stay in the green area. We empirically found the boundaries and adjusted the function for our scope.
 
@@ -312,9 +313,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contacts
 
-Francesco Laiti - [Github](https://github.com/laitifranz/) - [Linkedin](https://www.linkedin.com/in/francesco-laiti/) - [UniTN Email](mailto:francesco.laiti@studenti.unitn.it)
+Francesco Laiti - [Github](https://github.com/laitifranz/) - [LinkedIn](https://www.linkedin.com/in/francesco-laiti/) - [UniTN Email](mailto:francesco.laiti@studenti.unitn.it)
 <br>
-Davide Lobba - [Github](https://github.com/davidelobba/) - [Linkedin](https://www.linkedin.com/in/davide-lobba-659739185) - [UniTN Email](mailto:davide.lobba@studenti.unitn.it)
+Davide Lobba - [Github](https://github.com/davidelobba/) - [LinkedIn](https://www.linkedin.com/in/davide-lobba-659739185) - [UniTN Email](mailto:davide.lobba@studenti.unitn.it)
 
 ## Disclaimer
 
