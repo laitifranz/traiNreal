@@ -280,10 +280,16 @@ NOTE:
 <!-- DEMO -->
 ## Demo :movie_camera: 
 We show how the app looks like when wearing the glasses:
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img alt="Animation GIF" src="images/videos/animation.gif" width="45%"> |
- <img alt="Animation GIF" src="images/videos/animation.gif" width="45%">
+
+https://user-images.githubusercontent.com/25352428/198534659-e31fa6c2-b7e7-485e-8f64-eb700efb0656.mp4
+
+https://user-images.githubusercontent.com/25352428/198534953-d16719c3-b85e-4b38-a20d-46f0617aaccd.mp4
+
+https://user-images.githubusercontent.com/25352428/198534971-5e2c7738-5e83-4f43-9f2b-fcf360d10283.mp4
+
+https://user-images.githubusercontent.com/25352428/198534994-6c8f83d4-ea6c-48c7-b55d-dfa4d694a990.mp4
+
+https://user-images.githubusercontent.com/25352428/198535011-fa54cd89-83c3-4b80-8218-10b5ab924184.mp4
 
 <!-- CONCLUSIONS -->
 ## Further works
