@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NRKernal;
 using TMPro;
+using static UnityEngine.PlayerLoop.PreLateUpdate;
 
 public class HeadTracking : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class HeadTracking : MonoBehaviour
     public int totalReps;
     public bool loop = true, calibrated = false;
 
-    public float startPoint, endPoint;
+    public float startPoint, endPoint, floatValue=0.0f;
     public Vector3 calibration_position;
 
     public Button calibration_button;
@@ -25,7 +26,10 @@ public class HeadTracking : MonoBehaviour
     public DrawLine lineObj;
     public SceneChanger changeScene;
     public MoveCircle moveCircle;
+
     GameObject canvas;
+    public GameObject arrow;
+    Material arrowMaterial;
 
     void Start()
     {
@@ -36,6 +40,8 @@ public class HeadTracking : MonoBehaviour
         canvas.SetActive(false);
         line.GetComponent<LineRenderer>().enabled = false;
         _countReps.gameObject.SetActive(false);
+
+        arrowMaterial = arrow.GetComponent<Image>().material;
     }
 
     void Update()
@@ -86,9 +92,14 @@ public class HeadTracking : MonoBehaviour
             {
                 circle.SetActive(false);
                 canvas.SetActive(false);
-                if (PlayerPrefs.GetFloat("score") < moveCircle.totMark / totalReps) PlayerPrefs.SetInt("betterThanLastTime", 0);
+                if (PlayerPrefs.GetFloat("score") >= moveCircle.totMark / totalReps) PlayerPrefs.SetInt("betterThanLastTime", 0);
+                else PlayerPrefs.SetInt("betterThanLastTime", 1);
                 PlayerPrefs.SetFloat("score", moveCircle.totMark/totalReps);
                 PlayerPrefs.SetInt("totalReps", totalReps);
+
+                arrowMaterial.SetFloat("_Metallic", floatValue);
+                if(floatValue>=1.0f) floatValue = 0.0f  ;
+                floatValue += 0.01f;
             }
         }
 

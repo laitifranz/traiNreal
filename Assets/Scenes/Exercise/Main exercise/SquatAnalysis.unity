@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headTracking: {fileID: 1911378210}
   totMark: 0
+  weightY: 0.5
 --- !u!1 &263195173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,7 +2936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 113, y: -134}
+  m_AnchoredPosition: {x: 23, y: -134}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1897582532
@@ -3006,7 +3007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: c6edaa77923a64cb6b943c7d1a5bb062, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -3069,6 +3070,7 @@ MonoBehaviour:
   calibrated: 0
   startPoint: 0
   endPoint: -0.5
+  floatValue: 0
   calibration_position: {x: 0, y: 0, z: 0}
   calibration_button: {fileID: 1296817485}
   circle: {fileID: 1397092314}
@@ -3076,6 +3078,7 @@ MonoBehaviour:
   lineObj: {fileID: 1466114068}
   changeScene: {fileID: 1552484735}
   moveCircle: {fileID: 236735331}
+  arrow: {fileID: 1897582530}
 --- !u!4 &1911378211
 Transform:
   m_ObjectHideFlags: 0

@@ -12,11 +12,11 @@ public class DisplayResult : MonoBehaviour
     void Start()
     {
         summaryText = "SUMMARY:\n";
-        summaryText += ("\n-Precision: " + PlayerPrefs.GetFloat("score"));
+        summaryText += ("\n-Precision: " + PlayerPrefs.GetFloat("score") + "%");
         summaryText += ("\n-Total reps: " + PlayerPrefs.GetInt("totalReps"));
         summaryText += ("\n-Workout time: " + Mathf.Round(Time.realtimeSinceStartup) + "s");
-        if (PlayerPrefs.GetFloat("betterThanLastTime") == 0) summaryText += "\n\nYEAH BUDDY!\n You did better than last time!";
-        else summaryText += "\nBRUH?\n You did worse than last time, keep up!";
+        if (PlayerPrefs.GetFloat("betterThanLastTime") == 1) summaryText += "\n\nYEAH BUDDY!\n You did better than last time!";
+        else summaryText += "\nBRO?\n You did worse than last time, keep up!";
 
         _summary.text = summaryText;
     }

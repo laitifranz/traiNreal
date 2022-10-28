@@ -21,24 +21,24 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About the project</a>
+      <a href="#about-the-project-open_book">About the project</a>
       <ul>
-        <li><a href="#nreal-ar-jam-challenge-2022">Nreal AR JAM Challenge</a></li>
+        <li><a href="#nreal-ar-jam-challenge-2022-rocket">Nreal AR JAM Challenge</a></li>
         <li><a href="#workflow">Workflow</a></li>
       </ul>
     </li>
     <li>
-        <a href="#implementation">Implementation</a></li>
+        <a href="#implementation-computer">Implementation</a></li>
         <ul>
-            <li><a href="#characters">Characters</a></li>
-            <li><a href="#animations">Animations</a></li>
+            <li><a href="#characters-superhero_man">Characters</a></li>
+            <li><a href="#animations-runner">Animations</a></li>
             <li><a href="#ar-implementation-goggles">AR implementation</a></li>
             <li><a href="#scenes-structure">Scenes structure</a></li>
-            <li><a href="#data-storage">Data storage</a></li>
+            <li><a href="#data-storage-floppy_disk">Data storage</a></li>
       </ul>
     </li>
     <li>
-        <a href="#features">Features</a></li>
+        <a href="#features-sparkles">Features</a></li>
         <ul>
             <li><a href="#gamification">Gamification</a></li>
             <li><a href="#real-time-feedback">Real-time feedback</a></li>
@@ -47,9 +47,9 @@
     </ul>
     <li><a href="#getting-started-man_technologist">Getting Started</a></li>
     <li><a href="#usage-iphone">Usage</a></li>
-    <li><a href="#demo">Demo</a></li>
+    <li><a href="#demo-movie_camera">Demo</a></li>
     <li><a href="#further-works">Further works</a></li>
-    <li><a href="#award">Award</a></li>
+    <li><a href="#award-trophy">Award</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contacts</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
@@ -58,18 +58,15 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About the project
+## About the project :open_book:
 
 **The project aims to create an in-door fitness application for the AR JAM Challenge 2022 proposed by Nreal.**
 
-<!--The game engine used is [Unity](https://unity.com) version 2020.3, the application was tested on Android platform and [Nreal Air glasses](https://www.nreal.ai/light).\
-The 3D models for the humanoids used in this project were taken from [Mixamo](https://www.mixamo.com/).
-Moreover, for the animations of the characters we used the [OptiTrack](https://optitrack.com/) system, which is available at the Multisensory Interactions Lab to track and record body movements.-->
 We were invited to join this challenge after our final submission of the Computer Vision project available at [github.com/laitifranz/AR-SMPLX](github.com/laitifranz/AR-SMPLX).
 
 We had the opportunity to work with the latest AR technologies and gain knowledge and experience with Unity.
 <!-- NREAL AR JAM CHALLENGE -->
-### Nreal AR JAM Challenge 2022
+### Nreal AR JAM Challenge 2022 :rocket: 
 The [Nreal AR Jam](https://developer.nreal.ai/arjam/overview) is an international online challenge which was proposed in order to attract AR developers to its growing community. The competition is divided into 8 macro categories: At-Home Fitness, Art, Games, Screen 2.0, Port, Social, NFT and Student.
 
 We decided to apply for *At-Home Fitness* category because we believe that the COVID pandemic has drastically changed our habits and many of us have taken the isolation as a chance to improve their fitness, but improvising can be ineffective or, even worse, dangerous.
@@ -96,14 +93,14 @@ The challenge was divided into 3 milestones:
 - Milestone 3: submission of the final build *traiNreal.apk* with an updated description.
 
 <!-- IMPLEMENTATION -->
-## Implementation
+## Implementation :computer: 
 In this section we will provide some information about how we obtained characters and how we implemented animations. 
 
 We thank the YouTube channel [iHeartGameDev](https://www.youtube.com/c/iHeartGameDev) for the amazing tutorials that he made. We suggest you to see these videos to learn more about *Animation Controllers* and how to manage *Characters*, in particular [this playlist](https://www.youtube.com/playlist?list=PLwyUzJb_FNeS8s7OQKeNIr3NMHBIbhFeC).
 
 In the source code we left references, as comments, to resources where we found how to do a certain task.
 
-### Characters
+### Characters :superhero_man: 
 We used two main sources for downloading our characters:
 1. Mixamo from Adobe - [mixamo.com](https://www.mixamo.com/#/)
    - Settings 
@@ -124,7 +121,7 @@ To correctly import the character, it is important to follow these steps:
 4. If you would like to add the default skin (it works with Mixamo characters), select *Material*, apply the settings as the image explain, and then *Apply* <br><img width="300" alt="material" src="images/material_gameobject.png">
 5. Now you should find a new prefab inside the same folder of you character!
 
-### Animations
+### Animations :runner: 
 We used two main sources for our animations:
 1. Mixamo from Adobe - [mixamo.com](https://www.mixamo.com/#/)
    - Settings 
@@ -193,11 +190,11 @@ Now we will present how the scenes are connected:
     |         |        |
 Settings   Warm up   Helper   
               |
-            Lunges
-              |
           SquatView
               |
         SquatAnalysis
+              |
+            Lunges
               |
           Stretching
               |
@@ -208,14 +205,14 @@ Settings   Warm up   Helper
              ... # loop
 ```
 
-### Data storage
+### Data storage :floppy_disk: 
 We saved the preferences of the user using *PlayerPrefs* class (reference: [docs.unity3d.com/ScriptReference/PlayerPrefs.html](docs.unity3d.com/ScriptReference/PlayerPrefs.html)).
 
 With this class we easely created different key-value data to store information like the age, the name, the volume level and so on. 
 
 We faced reference errors while launching the app for the first time, due to the initialization of the values. To overcome it, we used the *Awake* class to set default values before the app is launched.
 <!-- Features  -->
-## Features
+## Features :sparkles:
 
 ### Gamification
 Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the users is weighted on the quality of the exercises.
@@ -281,24 +278,23 @@ NOTE:
 
 
 <!-- DEMO -->
-## Demo
-We provide some GIFs to show how the app looks like when wearing the glasses:
-<p align="center">
-  <img alt="Animation GIF" src="images/animation.gif" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Stop and go GIF" src="images/stop-and-go.gif" width="45%">
-</p>
+## Demo :movie_camera: 
+We show how the app looks like when wearing the glasses:
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img alt="Animation GIF" src="images/videos/animation.gif" width="45%"> |
+ <img alt="Animation GIF" src="images/videos/animation.gif" width="45%">
 
 <!-- CONCLUSIONS -->
 ## Further works
 - [ ] Add plane detection
 - [ ] Improve the interface
-- [ ] Integrate MRTK input systems
+- [ ] Support for MRTK input systems
 - [ ] Create a social part inside the app
 - [ ] Publish the app on Google Play Store
 
 <!-- AWARD -->
-## Award
+## Award :trophy: 
 Honorable mention by Nreal for the first milestone. We are waiting for the announcement of winners.
 <!-- add photos of swag gadget -->
 
@@ -328,6 +324,6 @@ Background music: Wake - Chris Heria ([SoundCloud](https://soundcloud.com/chrish
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Motivational quote
+## Motivational quote :man-lifting-weights: 
 “No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”
 <p align="right">- <i>Socrates</i> -</p>
