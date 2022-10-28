@@ -220,11 +220,11 @@ Gamification is a fundamental factor to create an engaging experience. In our ve
 We presented the final reward as a *score*, analysing the quality of the squat. We adopted the following function:
 
 <p align="center">
-  <img alt="score function" src="images/score_latex_light.png#gh-light-mode-only" width = "50%" />
-  <img alt="score function" src="images/score_latex_dark.png#gh-dark-mode-only" width = "50%" />
+  <img alt="score function" src="images/score_latex_light.png#gh-light-mode-only" width = "40%" />
+  <img alt="score function" src="images/score_latex_dark.png#gh-dark-mode-only" width = "40%" />
 </p>
 
-where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score is in a range between [0,100] (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
+where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score is in a range between $[0,100]$ (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
 
 We decided to adopt that function because it has a non-linear behaviour that penalizes the user's error more when it fails to stay in the green area. We empirically found the boundaries and adjusted the function for our scope.
 
