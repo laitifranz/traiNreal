@@ -170,11 +170,11 @@ This is the scheme of the scenes that you can find in [Assets/Scenes](Assets/Sce
 ├── Start               
 │   ├── Start               # menu
 │   ├── Settings            # change preferences
-│   └── Helper              # a briefly recap of the app and how to use it
+│   └── Helper              # briefly recap of the app and how to use it
 ├── Exercises             
 │   ├── Warm up             # pre training warm up exercises to follow
 │   ├── Main                # core exercises of our app
-│       ├── Lunges          # 3D visualization of the excercise
+│       ├── Lunges          # 3D visualization of the exercise
 │       ├── SquatView       # see squat movement from different viewpoints
 │       └── SquatAnalysis   # real-time feedback of squat execution
 │   └── Stretching          # final training exercises
@@ -220,8 +220,8 @@ Gamification is a fundamental factor to create an engaging experience. In our ve
 We presented the final reward as a *score*, analysing the quality of the squat. We adopted the following function:
 
 <p align="center">
-  <img alt="score function" src="images/score_latex_light.png#gh-light-mode-only" width = "40%" />
-  <img alt="score function" src="images/score_latex_dark.png#gh-dark-mode-only" width = "40%" />
+  <img alt="score function" src="images/score_latex_light.png#gh-light-mode-only" width = "45%" />
+  <img alt="score function" src="images/score_latex_dark.png#gh-dark-mode-only" width = "45%" />
 </p>
 
 where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score is in a range between $[0,100]$ (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
