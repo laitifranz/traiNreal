@@ -206,7 +206,7 @@ Settings   Warm up   Helper
 ```
 
 ### Data storage :floppy_disk: 
-We saved the preferences of the user using *PlayerPrefs* class (reference: [docs.unity3d.com/ScriptReference/PlayerPrefs.html](docs.unity3d.com/ScriptReference/PlayerPrefs.html)).
+We saved the preferences of the user using *PlayerPrefs* class (reference: [docs.unity3d.com/ScriptReference/PlayerPrefs.html](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html)).
 
 With this class we easely created different key-value data to store information like the age, the name, the volume level and so on. 
 
@@ -215,12 +215,12 @@ We faced reference errors while launching the app for the first time, due to the
 ## Features :sparkles:
 
 ### Gamification
-Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the users is weighted on the quality of the exercises.
+Gamification is a fundamental factor to create an engaging experience. In our version we have created the possibility to use fantasy avatars as personal trainers. Moreover, the fact of giving a final reward to the user is weighted on the quality of the exercises.
 
 We presented the final reward as a *score*, analysing the quality of the squat. We adopted the following function:
 $$score(d) = \biggl({\frac{1}{d + 0.5} }-1\biggl)*100$$
 
-where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score has a range between $-\infty$ and 100 (higher is better). 
+where *d* is the distance computed between the center of the circle presented in the *Squat Analysis* scene and the current position of the head. The value is collected every half second. The final score has a range between $-\infty$ and 100 (higher is better) and it is calculated by computing the mean between all the data collected during the squat exercise. 
 
 We decided to adopt that function because it has a non-linear behaviour that penalizes the user's error more when it fails to stay in the green area. We empirically found the boundaries and adjusted the function for our scope.
 
@@ -273,7 +273,7 @@ NOTE:
 
 1. Open the application. If it is the first time that you open the app, you will be guided inside the app
 2. Choose your personal trainer, among those proposed, in *Settings*
-3. Start the workout and enjoy the free-joystic interaction
+3. Start the workout and enjoy the hands-free experience
 4. Enjoy your workout and do your best! :zap:
 
 
@@ -324,12 +324,12 @@ The project is only for educational purposes. We don't monetize or get profit fr
 
 We thank the team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the active collaboration and the opportunity to use the OptiTrack system available at the Multisensory Interactions Lab.
 
-A special thanks to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication in following us during whole the project. Thanks to Giuseppe Spallita (PhD student) for helping us with the first and third milestones of the challenge.
+A special thanks to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication in following us during whole the project. Thanks also to Giuseppe Spallita (PhD student) for helping us with the first and third milestones of the challenge.
 
 Background music: Wake - Chris Heria ([SoundCloud](https://soundcloud.com/chrisheria/woke-chris-heria?in=chrisheria/sets/workout-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Motivational quote :man-lifting-weights: 
+## Motivational quote :weight_lifting_man: 
 “No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”
 <p align="right">- <i>Socrates</i> -</p>
