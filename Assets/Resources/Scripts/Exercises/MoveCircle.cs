@@ -58,7 +58,8 @@ public class MoveCircle : MonoBehaviour
     void Score(Vector2 currentPosition)
     {
         distanceScore = Mathf.Abs(Vector2.Distance(currentPosition, initPos_2D) - distanceCalib);
-        distanceScore = (1 / (distanceScore + 0.5f) - 1) * 100;
+        if (distanceScore >= 0.5f) distanceScore = 0.0f;
+        else distanceScore = (1 / (distanceScore + 0.5f) - 1) * 100;
 
         totDist += distanceScore;
         count++;
