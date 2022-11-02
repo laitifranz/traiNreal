@@ -62,7 +62,7 @@
 
 **The project aims to create an in-door fitness application for the AR JAM Challenge 2022 proposed by Nreal.**
 
-We were invited to join this challenge after our final submission of the Computer Vision project available at [github.com/laitifranz/AR-SMPLX](github.com/laitifranz/AR-SMPLX).
+We were invited to join this challenge after our final submission of the *Computer Vision* project available at [github.com/laitifranz/AR-SMPLX](github.com/laitifranz/AR-SMPLX).
 
 We had the opportunity to work with the latest AR technologies and gain knowledge and experience with Unity.
 <!-- NREAL AR JAM CHALLENGE -->
@@ -229,7 +229,7 @@ where *d* is the distance computed between the center of the circle presented in
 We decided to adopt that function because it has a non-linear behaviour that penalizes the user's error more when it fails to stay in the green area. We empirically found the boundaries and adjusted the function for our scope.
 
 ### Real-time Feedback
-We provide real-time feedbacks to the user in order to evaluate how well the athlete is performing the squat exercise. For the evaluation, we take into consideration the movement of the head as suggested in this scientific paper "[The back squat: A proposed assessment of functional deficits and technical factors that limit performance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262933/)".
+We provide real-time feedbacks to the user in order to evaluate how well the athlete is performing the squat exercise. For the evaluation, we take into consideration the movement of the head as suggested in this scientific paper "[The back squat: A proposed assessment of functional deficits and technical factors that limit performance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262933/)". 
 
 ### Multi-view perspective
 With this feature, we provide the possibility to explore the 3D exercises from all perspectives in order to help the user understand how to perform correctly the exercise. The personal trainer can be stopped in a certain position to see exactly the body pose.
