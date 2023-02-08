@@ -9,20 +9,15 @@
 
   <p align="center">
     A pocket-size metatrainer: fitness is only a gesture away
-    <br>
-    <br>
-    <div style="background: ghostwhite; 
-            font-size: 15px; 
-            padding: 10px; 
-            border: 1px solid lightgray; 
-            margin: 10px;">
-    <b>Code available on request</b>
-    </div>
-    <br>
   </p>
 </div>
 
+---
+<p align="center">
+  <b>CODE AVAILABLE ON REQUEST</b>
+</p>
 
+---
 
 <!-- TABLE OF CONTENTS -->
 <details open>
