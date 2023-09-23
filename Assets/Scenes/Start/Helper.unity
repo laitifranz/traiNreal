@@ -492,7 +492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Helper
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1018,15 +1018,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This app was made for the Nreal AR JAM Challenge 2022.\n\nApp made by
-    Francesco Laiti and Davide Lobba (M.Sc. UniTN students). \n\nWe thank the team
-    from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the active collaboration
+  m_Text: "NON COMMERCIAL USE\nWe are not responsible for any damage or injury you
+    get by using our app.\n\nThis app was made for the Nreal AR JAM Challenge 2022.\nApp
+    made by Francesco Laiti and Davide Lobba (M.Sc. UniTN students). \nWe thank the
+    team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the active collaboration
     and the opportunity to use the OptiTrack system available at the Multisensory
-    Interactions Lab.\n\nA special thank to Lorenzo Orlandi and Giulia Martinelli
-    (PhD students at the University of Trento) for their support and dedication to
-    follow us during whole the project. Thanks to Giuseppe Spallita (PhD student)
-    for helping us with the first milestone of the challenge.\n\nProject available
-    on GitHub!"
+    Interactions Lab.\nA special thank to Lorenzo Orlandi and Giulia Martinelli (PhD
+    students at the University of Trento) for their support and dedication to follow
+    us during whole the project.\n\nThe project will be available on GitHub soon!\n\nFor
+    feedbacks write to trainrealfitness@gmail.com"
 --- !u!222 &1815306169
 CanvasRenderer:
   m_ObjectHideFlags: 0

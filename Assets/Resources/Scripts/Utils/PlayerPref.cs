@@ -17,7 +17,7 @@ public class PlayerPref : MonoBehaviour
             PlayerPrefs.SetInt("age", 18);
             PlayerPrefs.SetInt("height", 180);
             PlayerPrefs.SetString("name", "");
-            PlayerPrefs.SetFloat("volume", -50f);
+            PlayerPrefs.SetFloat("volume", -40f);
             PlayerPrefs.SetInt("avatarChoice", 0);
             PlayerPrefs.SetString("lastAccess", System.DateTime.Now.ToShortDateString());
             PlayerPrefs.SetInt("firstAccess", 1);
