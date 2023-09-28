@@ -5,57 +5,53 @@
 <div align="center">
     <img src="images/traiNreal_icon.png" alt="Logo" width="120" height="120">
 
-  <h2 align="center">traiNreal</h2>
+  <h1 align="center">traiNreal</h1>
 
   <p align="center">
     A pocket-size metatrainer: fitness is only a gesture away
-    <br>
-    <br>
   </p>
 </div>
 
+> :fire: Official repository for the paper **"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**, published at IEEE Star 2023 conference. :star2: this repo!
+
+> :fire: Honorable mention for the Nreal AR JAM Challenge 2022
 
 
 <!-- TABLE OF CONTENTS -->
 <details open>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project-open_book">About the project</a>
-      <ul>
-        <li><a href="#nreal-ar-jam-challenge-2022-rocket">Nreal AR JAM Challenge</a></li>
-        <li><a href="#workflow">Workflow</a></li>
-      </ul>
-    </li>
-    <li>
-        <a href="#implementation-computer">Implementation</a></li>
-        <ul>
-            <li><a href="#characters-superhero_man">Characters</a></li>
-            <li><a href="#animations-runner">Animations</a></li>
-            <li><a href="#ar-implementation-goggles">AR implementation</a></li>
-            <li><a href="#scenes-structure">Scenes structure</a></li>
-            <li><a href="#data-storage-floppy_disk">Data storage</a></li>
-      </ul>
-    </li>
-    <li>
-        <a href="#features-sparkles">Features</a></li>
-        <ul>
-            <li><a href="#gamification">Gamification</a></li>
-            <li><a href="#real-time-feedback">Real-time feedback</a></li>
-            <li><a href="#multi-view-perspective">Multi-view perspective</a></li>
-            <li><a href="#immersivity">Immersivity</a></li>
-    </ul>
-    <li><a href="#getting-started-man_technologist">Getting Started</a></li>
-    <li><a href="#usage-iphone">Usage</a></li>
-    <li><a href="#demo-movie_camera">Demo</a></li>
-    <li><a href="#further-works">Further works</a></li>
-    <li><a href="#award-trophy">Award</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contacts</a></li>
-    <li><a href="#disclaimer">Disclaimer</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
+  <summary><strong>Table of Contents</strong></summary>
+  
+  - **[About the project :open_book:](#about-the-project-open_book)**
+    - [Nreal AR JAM Challenge :rocket:](#nreal-ar-jam-challenge-2022-rocket)
+    - [Workflow](#workflow)
+    
+  - **[Implementation :computer:](#implementation-computer)**
+    - [Characters :superhero_man:](#characters-superhero_man)
+    - [Animations :runner:](#animations-runner)
+    - [AR implementation :goggles:](#ar-implementation-goggles)
+    - [Scenes structure](#scenes-structure)
+    - [Data storage :floppy_disk:](#data-storage-floppy_disk)
+    
+  - **[Features :sparkles:](#features-sparkles)**
+    - [Gamification](#gamification)
+    - [Real-time feedback](#real-time-feedback)
+    - [Multi-view perspective](#multi-view-perspective)
+    - [Immersivity](#immersivity)
+    
+  - **[Getting Started :man_technologist:](#getting-started-man_technologist)**
+  - **[Usage :iphone:](#usage-iphone)**
+  - **[Demo :movie_camera:](#demo-movie_camera)**
+  - **[Further works](#further-works)**
+  - **[Award :trophy:](#award-trophy)**
+  - **[License](#license)**
+  - **[Contacts](#contacts)**
+  - **[Disclaimer](#disclaimer)**
+  - **[Citing our work](#citing-our-work)** 
+  - **[Acknowledgments](#acknowledgments)**
+  
 </details>
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About the project :open_book:
@@ -77,6 +73,9 @@ We presented our idea with this incipit:
 
 Therefore, we developed an idea for helping people at home and don't feel alone during workouts.
 
+#### Update
+Official repository of IEEE Star 2023 paper "Meta-trainer: an augmented reality trainer for home fitness with real-time feedback". Presented at the International Workshop on Sport Technology and Research in Cavalese, Italy the 15th of September 2023.
+
 <!-- WORKFLOW -->
 ### Workflow
 ![Workflow](images/workflow_light.png#gh-light-mode-only)
@@ -85,8 +84,8 @@ The challenge was divided into 3 milestones:
 - Milestone 1: propose an idea and a pitch that describe our application.
 - Milestone 2: provide concept arts (screenshots and videos of the application) and update the description.
 
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
+| | |
+|:-------------------------:|:-------------------------:
 |<img width="1604" alt="initial_interface" src="images/concept_arts/initial_interface.png"> | <img width="1604" alt="ok_squat" src="images/concept_arts/ok_squat.png"> |
  <img width="1604" alt="plot" src="images/concept_arts/plot.png"> | <img width="1604" alt="squat" src="images/concept_arts/squat.png">|
 <!-- https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37#file-image-grid-md -->
@@ -295,18 +294,28 @@ https://user-images.githubusercontent.com/25352428/198534994-6c8f83d4-ea6c-48c7-
 
 https://user-images.githubusercontent.com/25352428/198535011-fa54cd89-83c3-4b80-8218-10b5ab924184.mp4
 
+If for some reason the above section does not work, please follow these links for the demo:
+| Video | Link |
+| ------------ | ---- |
+| Warm up init      | [Link 1](https://user-images.githubusercontent.com/25352428/198534659-e31fa6c2-b7e7-485e-8f64-eb700efb0656.mp4) |
+| Warm up stop and go      | [Link 2](https://user-images.githubusercontent.com/25352428/198534953-d16719c3-b85e-4b38-a20d-46f0617aaccd.mp4) |
+| Settings      | [Link 3](https://user-images.githubusercontent.com/25352428/198534971-5e2c7738-5e83-4f43-9f2b-fcf360d10283.mp4) |
+| Squat analysis      | [Link 4](https://user-images.githubusercontent.com/25352428/198534994-6c8f83d4-ea6c-48c7-b55d-dfa4d694a990.mp4) |
+| End scene      | [Link 5](https://user-images.githubusercontent.com/25352428/198535011-fa54cd89-83c3-4b80-8218-10b5ab924184.mp4) |
+
+
 <!-- CONCLUSIONS -->
 ## Further works
 - [ ] Add plane detection
 - [ ] Improve the interface
 - [ ] Support for MRTK input systems
 - [ ] Create a social part inside the app
+- [ ] Extend the project to more AR glasses
 - [ ] Publish the app on Google Play Store
 
 <!-- AWARD -->
 ## Award :trophy: 
-Honorable mention by Nreal for the first milestone. We are waiting for the announcement of winners.
-<!-- add photos of swag gadget -->
+Honorable mention by Nreal during the announcement of the final winner list! [Twitter post](https://twitter.com/nreal/status/1588154033562423298?s=46&t=8CXV-C_VtIsEePMaasjq0w)
 
 <!-- LICENSE -->
 ## License
@@ -316,13 +325,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contacts
 
-Francesco Laiti - [Github](https://github.com/laitifranz/) - [LinkedIn](https://www.linkedin.com/in/francesco-laiti/) - [UniTN Email](mailto:francesco.laiti@studenti.unitn.it)
+Francesco Laiti - [Github](https://github.com/laitifranz/) - [LinkedIn](https://www.linkedin.com/in/francesco-laiti/)
 <br>
-Davide Lobba - [Github](https://github.com/davidelobba/) - [LinkedIn](https://www.linkedin.com/in/davide-lobba-659739185) - [UniTN Email](mailto:davide.lobba@studenti.unitn.it)
+Davide Lobba - [Github](https://github.com/davidelobba/) - [LinkedIn](https://www.linkedin.com/in/davide-lobba-659739185)
 
 ## Disclaimer
 
 The project is only for educational purposes. We don't monetize or get profit from it.
+
+## Citing our work
+If you use this code, or you find some of this repository helpful, please cite:
+
 
 ## Acknowledgments
 
@@ -330,9 +343,7 @@ We thank the team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the 
 
 A special thanks to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication in following us during whole the project. Thanks also to Giuseppe Spallita (PhD student) for helping us with the first and third milestones of the challenge.
 
-Background music: Wake - Chris Heria ([SoundCloud](https://soundcloud.com/chrisheria/woke-chris-heria?in=chrisheria/sets/workout-music&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing))
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Background music: Mixture of NCS music from Youtube.
 
 ## Motivational quote :weight_lifting_man: 
 “No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”
