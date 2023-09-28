@@ -14,7 +14,7 @@
 
 > :fire: Official repository for the paper **"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**, published at IEEE Star 2023 conference. :star2: this repo!
 
-> :fire: Honorable mention for the Nreal AR JAM Challenge 2022
+> :fire: Honorable mention in Xreal (formerly Nreal) AR JAM 2022 Challenge
 
 
 <!-- TABLE OF CONTENTS -->
@@ -58,12 +58,12 @@
 
 **The project aims to create an in-door fitness application for the AR JAM Challenge 2022 proposed by Nreal.**
 
-We were invited to join this challenge after our final submission of the *Computer Vision* project available at [github.com/laitifranz/AR-SMPLX](github.com/laitifranz/AR-SMPLX).
+We were invited to join this challenge after our final submission of the *Computer Vision* project available at [github.com/laitifranz/AR-SMPLX](https://github.com/laitifranz/AR-SMPLX).
 
 We had the opportunity to work with the latest AR technologies and gain knowledge and experience with Unity.
 <!-- NREAL AR JAM CHALLENGE -->
 ### Nreal AR JAM Challenge 2022 :rocket: 
-The [Nreal AR Jam](https://developer.nreal.ai/arjam/overview) is an international online challenge which was proposed in order to attract AR developers to its growing community. The competition is divided into 8 macro categories: At-Home Fitness, Art, Games, Screen 2.0, Port, Social, NFT and Student.
+The Nreal AR Jam is an international online challenge which was proposed in order to attract AR developers to its growing community. The competition is divided into 8 macro categories: At-Home Fitness, Art, Games, Screen 2.0, Port, Social, NFT and Student.
 
 We decided to apply for *At-Home Fitness* category because we believe that the COVID pandemic has drastically changed our habits and many of us have taken the isolation as a chance to improve their fitness, but improvising can be ineffective or, even worse, dangerous.
 
