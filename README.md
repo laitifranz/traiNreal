@@ -12,7 +12,7 @@
   </p>
 </div>
 
-> :fire: Official repository for the paper **"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**, published at IEEE Star 2023 conference. :star2: this repo!
+> :fire: Official repository for the paper [**"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**](https://ieeexplore.ieee.org/document/10302670) published at IEEE Star 2023 conference. :star2: this repo!
 
 > :fire: Honorable mention in Xreal (formerly Nreal) AR JAM 2022 Challenge
 
