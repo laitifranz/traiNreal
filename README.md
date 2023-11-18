@@ -334,8 +334,20 @@ Davide Lobba - [Github](https://github.com/davidelobba/) - [LinkedIn](https://ww
 The project is only for educational purposes. We don't monetize or get profit from it.
 
 ## Citing our work
-If you use this code, or you find some of this repository helpful, please cite:
+If you use this code, or you find some of this repository helpful, please cite us:
 
+```
+@INPROCEEDINGS{10302670,
+  author={Orlandi, Lorenzo and Martinelli, Giulia and Laiti, Francesco and Lobba, Davide and Bisagno, Niccoló and Conci, Nicola},
+  booktitle={2023 IEEE International Workshop on Sport, Technology and Research (STAR)}, 
+  title={Meta-Trainer: An Augmented Reality Trainer for Home Fitness with Real-Time Feedback}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={90-93},
+  doi={10.1109/STAR58331.2023.10302670}}
+
+```
 
 ## Acknowledgments
 
