@@ -1,4 +1,8 @@
-<div id="top"></div>
+<div align="center">
+    <a href="https://unity.com"><img alt="Unity" src="https://img.shields.io/badge/-Unity-FFFFFF?logo=unity&logoColor=black"></a>
+    <a href="https://www.android.com"><img alt="Android" src="https://img.shields.io/badge/Android-34A853?logo=android&logoColor=white"></a>
+    <a href="https://www.xreal.com/it/arlab/detail/?id=13&appname=TraiNreal"><img alt="Xreal ARLab" src="https://img.shields.io/badge/Xreal-AR_Lab-blue"></a>
+</div>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -12,49 +16,34 @@
   </p>
 </div>
 
-> :fire: Official repository for the paper [**"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**](https://ieeexplore.ieee.org/document/10302670) published at IEEE Star 2023 conference. :star2: this repo!
+<div align="center">
+    <a href=#about-the-project-open_book>About</a>
+    •
+    <a href=#implementation-computer>Implementation</a>
+    •
+    <a href=#features-sparkles >Features</a>
+    •
+    <a href=#getting-started-man_technologist>Getting Started</a>
+    •
+    <a href=#demo-movie_camera >Demo</a>
+    •
+    <a href=#future-works >Future Works</a>
+    •
+    <a href=#contributing >Contributing</a>
+    •
+    <a href=#citing-our-work >Citing</a>
+    •
+    <a href=#acknowledgments >Acknowledgments</a>
+</div>
+<br>
 
-> :fire: Honorable mention in Xreal (formerly Nreal) AR JAM 2022 Challenge
+### News
+> :fire: Official repository for the paper [**"Meta-trainer: an augmented reality trainer for home fitness with real-time feedback"**](https://ieeexplore.ieee.org/document/10302670) published at IEEE Star 2023 conference and presented in Cavalese, Italy the 15th of September 2023. :star2: this repo!
 
-
-<!-- TABLE OF CONTENTS -->
-<details open>
-  <summary><strong>Table of Contents</strong></summary>
-  
-  - **[About the project :open_book:](#about-the-project-open_book)**
-    - [Nreal AR JAM Challenge :rocket:](#nreal-ar-jam-challenge-2022-rocket)
-    - [Workflow](#workflow)
-    
-  - **[Implementation :computer:](#implementation-computer)**
-    - [Characters :superhero_man:](#characters-superhero_man)
-    - [Animations :runner:](#animations-runner)
-    - [AR implementation :goggles:](#ar-implementation-goggles)
-    - [Scenes structure](#scenes-structure)
-    - [Data storage :floppy_disk:](#data-storage-floppy_disk)
-    
-  - **[Features :sparkles:](#features-sparkles)**
-    - [Gamification](#gamification)
-    - [Real-time feedback](#real-time-feedback)
-    - [Multi-view perspective](#multi-view-perspective)
-    - [Immersivity](#immersivity)
-    
-  - **[Getting Started :man_technologist:](#getting-started-man_technologist)**
-  - **[Usage :iphone:](#usage-iphone)**
-  - **[Demo :movie_camera:](#demo-movie_camera)**
-  - **[Further works](#further-works)**
-  - **[Award :trophy:](#award-trophy)**
-  - **[License](#license)**
-  - **[Contacts](#contacts)**
-  - **[Disclaimer](#disclaimer)**
-  - **[Citing our work](#citing-our-work)** 
-  - **[Acknowledgments](#acknowledgments)**
-  
-</details>
-
-
+> :fire: Honorable mention in Xreal (formerly Nreal) AR JAM 2022 Challenge [(X post)](https://x.com/XREAL_Global/status/1588154033562423298?s=46&t=8CXV-C_VtIsEePMaasjq0w)
 
 <!-- ABOUT THE PROJECT -->
-## About the project :open_book:
+## About The Project :open_book:
 
 **The project aims to create an in-door fitness application for the AR JAM Challenge 2022 proposed by Nreal.**
 
@@ -73,8 +62,6 @@ We presented our idea with this incipit:
 
 Therefore, we developed an idea for helping people at home and don't feel alone during workouts.
 
-#### Update
-Official repository of IEEE Star 2023 paper "Meta-trainer: an augmented reality trainer for home fitness with real-time feedback". Presented at the International Workshop on Sport Technology and Research in Cavalese, Italy the 15th of September 2023.
 
 <!-- WORKFLOW -->
 ### Workflow
@@ -204,7 +191,7 @@ Settings   Warm up    Helper
              ... # loop
 ```
 
-### Data storage :floppy_disk: 
+### Data Storage :floppy_disk: 
 We saved the preferences of the user using *PlayerPrefs* class (reference: [docs.unity3d.com/ScriptReference/PlayerPrefs.html](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html)).
 
 With this class we easely created different key-value data to store information like the age, the name, the volume level and so on. 
@@ -230,7 +217,7 @@ We decided to adopt that function because it has a non-linear behaviour that pen
 ### Real-time Feedback
 We provide real-time feedbacks to the user in order to evaluate how well the athlete is performing the squat exercise. For the evaluation, we take into consideration the movement of the head as suggested in this scientific paper "[The back squat: A proposed assessment of functional deficits and technical factors that limit performance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262933/)". 
 
-### Multi-view perspective
+### Multi-view Perspective
 With this feature, we provide the possibility to explore the 3D exercises from all perspectives in order to help the user understand how to perform correctly the exercise. The personal trainer can be stopped in a certain position to see exactly the body pose.
 
 ### Immersivity
@@ -298,43 +285,56 @@ If for some reason the above section does not work, please follow these links fo
 | Video | Link |
 | ------------ | ---- |
 | Warm up init      | [Link 1](https://user-images.githubusercontent.com/25352428/198534659-e31fa6c2-b7e7-485e-8f64-eb700efb0656.mp4) |
-| Warm up stop and go      | [Link 2](https://user-images.githubusercontent.com/25352428/198534953-d16719c3-b85e-4b38-a20d-46f0617aaccd.mp4) |
+| Warm up s and go      | [Link 2](https://user-images.githubusercontent.com/25352428/198534953-d16719c3-b85e-4b38-a20d-46f0617aaccd.mp4) |
 | Settings      | [Link 3](https://user-images.githubusercontent.com/25352428/198534971-5e2c7738-5e83-4f43-9f2b-fcf360d10283.mp4) |
 | Squat analysis      | [Link 4](https://user-images.githubusercontent.com/25352428/198534994-6c8f83d4-ea6c-48c7-b55d-dfa4d694a990.mp4) |
 | End scene      | [Link 5](https://user-images.githubusercontent.com/25352428/198535011-fa54cd89-83c3-4b80-8218-10b5ab924184.mp4) |
 
-
 <!-- CONCLUSIONS -->
-## Further works
+## Future Works
 - [ ] Add plane detection
 - [ ] Improve the interface
 - [ ] Support for MRTK input systems
 - [ ] Create a social part inside the app
 - [ ] Extend the project to more AR glasses
-- [ ] Publish the app on Google Play Store
+- [ ] Update SDK versions
 
-<!-- AWARD -->
-## Award :trophy: 
-Honorable mention by Nreal during the announcement of the final winner list! [Twitter post](https://twitter.com/nreal/status/1588154033562423298?s=46&t=8CXV-C_VtIsEePMaasjq0w)
+## Contributing
+Contributions to traiNreal are welcome! If you'd like to contribute, please follow these guidelines:
 
-<!-- LICENSE -->
-## License
+1. **Fork the repository on GitHub**.
+   Navigate to the traiNreal repository and click the "Fork" button to create a copy of the repository on your GitHub account.
 
-Distributed under the MIT License. See `LICENSE` for more information.
+2. **Create a new branch**.
+   Create a new branch with a descriptive name for your feature or bug fix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes**.
+    Implement your changes and ensure they are tested on at least one Xreal Glasses and a compatible mobile device.
 
-<!-- CONTACT -->
-## Contacts
+4. **Commit your changes**.
+    Commit your changes with a clear and concise commit message:
+    ```bash
+    git commit -m "Description of your changes"
+    ```
 
-Francesco Laiti - [Github](https://github.com/laitifranz/) - [LinkedIn](https://www.linkedin.com/in/francesco-laiti/)
-<br>
-Davide Lobba - [Github](https://github.com/davidelobba/) - [LinkedIn](https://www.linkedin.com/in/davide-lobba-659739185)
+5. **Push to your forked repository**.
+    Push your changes to your forked repository:
+
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+    
+6. **Submit a pull request**.
+    Go to the original traiNreal repository and submit a pull request. Please detail the changes you made and explain their purpose.
 
 ## Disclaimer
 
 The project is only for educational purposes. We don't monetize or get profit from it.
 
-## Citing our work
-If you use this code, or you find some of this repository helpful, please cite us:
+## Citing Our Work
+If you use this code, or you find this repository helpful, please cite us:
 
 ```
 @INPROCEEDINGS{10302670,
@@ -355,8 +355,8 @@ We thank the team from Arcoda s.r.l & Terranova Software &  MMLab@UniTN for the 
 
 A special thanks to Lorenzo Orlandi and Giulia Martinelli (PhD students at the University of Trento) for their support and dedication in following us during whole the project. Thanks also to Giuseppe Spallita (PhD student) for helping us with the first and third milestones of the challenge.
 
-Background music: Mixture of NCS music from Youtube.
+Background music: Mixture of NCS music from YouTube.
 
-## Motivational quote :weight_lifting_man: 
+## Motivational Quote :weight_lifting_man: 
 “No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”
 <p align="right">- <i>Socrates</i> -</p>
