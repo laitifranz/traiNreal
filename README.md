@@ -1,7 +1,8 @@
 <div align="center">
     <a href="https://unity.com"><img alt="Unity" src="https://img.shields.io/badge/-Unity-FFFFFF?logo=unity&logoColor=black"></a>
-    <a href="https://www.android.com"><img alt="Android" src="https://img.shields.io/badge/Android-34A853?logo=android&logoColor=white"></a>
+    <a href="https://developer.xreal.com/download"><img alt="Xreal SKD" src="https://img.shields.io/badge/NRSDK-for_Unity-711d2b"></a>
     <a href="https://www.xreal.com/it/arlab/detail/?id=13&appname=TraiNreal"><img alt="Xreal ARLab" src="https://img.shields.io/badge/Xreal-AR_Lab-blue"></a>
+    <a href="https://www.android.com"><img alt="Android" src="https://img.shields.io/badge/Android-34A853?logo=android&logoColor=white"></a>
 </div>
 
 <!-- PROJECT LOGO -->
@@ -32,8 +33,6 @@
     <a href=#contributing >Contributing</a>
     •
     <a href=#citing-our-work >Citing</a>
-    •
-    <a href=#acknowledgments >Acknowledgments</a>
 </div>
 <br>
 
